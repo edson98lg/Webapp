@@ -1,0 +1,49 @@
+{% extends './layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}"> {% endblock %}
+
+{% block body %}
+
+<div class="align-self-center">
+
+    <div id="main">
+        <div class="cointainer-md p-5">
+            <div class="row pt-5">
+                <h1 class="text-center">
+                    Sistema de captura
+                </h1>
+            </div>
+            <div>
+                <h2 class="text-center">Jala verde</h2>
+            </div>
+        </div>
+    </div>
+
+    <ul class="card-list">
+        <li class="card">
+            <a class="card-image" href="/mejoravit" target="_blank"></a>
+            <a class="card-description" href="/mejoravit" target="_blank">
+                <h2>Mejoravit</h2>
+            </a>
+        </li>
+        <li class="card">
+            <a class="card-image" href="/hipoteca-verde" target="_blank"></a>
+            <a class="card-description" href="/hipoteca-verde" target="_blank">
+                <h2>Hipoteca verde</h2>
+            </a>
+        </li>
+        <li class="card">
+            <a class="card-image" href="/bancos" target="_blank"></a>
+            <a class="card-description" href="/bancos" target="_blank">
+                <h2>Bancos</h2>
+            </a>
+        </li>
+        
+    </ul>
+    
+</div>
+{% endblock %}
+
+{% block js%} <script src="{{ url_for('static',filename='js/index.js') }}"></script> {% endblock %}

@@ -1,0 +1,82 @@
+.btn{
+    font-size: x-small;
+    font-weight: 450;
+}
+.titulo{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+}
+.titulo-2{
+    padding-top: 2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+}
+.navbar{
+    background-color: rgb(37, 37, 37);
+}
+span{
+    color: rgb(236, 236, 236);
+}
+td{
+    height: 1em;
+    width: 2em;
+}
+.layout-tabla{
+    margin-top: 1em;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    height:500px;
+    border: 1px solid rgba(255,255,255,0.3);
+    overflow-x:auto;
+    
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+.Contenedor_buscador{
+    display: inline-block;
+    position: relative;
+    top: 15%;
+    left: 30%;
+    
+    
+      
+}
+.contenedor-modificadores{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+.titulos{
+    font-size: x-large;
+    text-align: center;
+}
+.fechas{
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    border-radius: 5%;
+    border-color: gray;
+    padding: 10 10 10 10;
+}
+
+.fecha{
+    width: 6em;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+

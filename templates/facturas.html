@@ -1,0 +1,53 @@
+
+
+{% extends './layout.html' %}
+
+{% block title %} Sistema de facturas {% endblock %}
+
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/facturas-menu.css') }}"> {% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg  pl-5 pr-5">
+    <div class="container-fluid">
+            <span class="titulo">Facturas</span>
+            <div> 
+                <span>Usuario:<strong> {{data.usuario}}</strong> </span>
+                <a href="/salir"><span class="btn btn-danger ml-3 "> Cerrar sesion</span></a>
+            </div>
+    </div>
+</nav>
+
+
+<div class="align-self-center">
+
+    <div id="main">
+        <div class="cointainer-md p-5">
+            <div class="row pt-5">
+                <h1 class="text-center">
+                    Sistema de facturas
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <ul class="card-list">
+        <li class="card">
+            <a class="card-image" href="/factura-asesores"></a>
+            <a class="card-description" href="/factura-asesores" >
+                <h2>Asesores</h2>
+            </a>
+        </li>
+        <li class="card">
+            <a class="card-image" href="/factura-administrativa"></a>
+            <a class="card-description" href="/factura-administrativa">
+                <h2>Administrativa</h2>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+
+
+{% endblock %}
+
+{% block js%} {% endblock %}

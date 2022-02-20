@@ -1,0 +1,22 @@
+.btn{
+    font-size: x-small;
+    font-weight: 450;
+}
+.titulo{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+}
+.navbar{
+    background-color: rgb(37, 37, 37);
+}
+span{
+    color: rgb(236, 236, 236);
+}
+.contenedor_agregar{
+    height: 50px;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: 5%;
+
+}

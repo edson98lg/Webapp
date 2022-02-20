@@ -1,0 +1,54 @@
+{% extends './layout.html' %}
+
+{% block title %} Mejoravit {% endblock %}
+
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}"> {% endblock %}
+
+{% block body %}
+
+<div class="align-self-center">
+
+    <div id="main">
+        <div class="cointainer-md p-5">
+            <div class="row pt-5">
+                <h1 class="text-center">
+                    Mejoravit
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <ul class="card-list">
+        <li class="card">
+            <a class="card-image" href="/login-asesores" target="_blank" data-image-full="{{ url_for('static',filename='img/asesores.jpg') }}"></a>
+            <a class="card-description" href="/login-asesores" target="_blank">
+                <h2>Captura asesores</h2>
+            </a>
+        </li>
+        <li class="card">
+            <a class="card-image" href="/login-admin" target="_blank"  data-image-full="{{ url_for('static',filename='img/admin.jpg') }}"></a>
+            <a class="card-description" href="/login-admin" target="_blank">
+                <h2>Reportes</h2>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="card-list">
+        <li class="card">
+            <a class="card-image" href="/login-facturas" target="_blank" data-image-full="{{ url_for('static',filename='img/contador.jpg') }}"></a>
+            <a class="card-description" href="/login-facturas" target="_blank">
+                <h2>Facturas</h2>
+            </a>
+        </li>
+        <li class="card">
+            <a class="card-image" href="/login-graficas" target="_blank" data-image-full="{{ url_for('static',filename='img/contador.jpg') }}"></a>
+            <a class="card-description" href="/login-graficas" target="_blank">
+                <h2>Graficas</h2>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+{% endblock %}
+
+{% block js%} <script src="{{ url_for('static',filename='js/index.js') }}"></script> {% endblock %}

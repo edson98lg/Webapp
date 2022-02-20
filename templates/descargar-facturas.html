@@ -1,0 +1,25 @@
+{% extends './layout.html' %}
+
+{% block title %} Descargar factura {% endblock %}
+
+{% block css%} {% endblock %}
+
+{% block body %}
+
+    <h1 class="p-4">Descarga la factura</h1>
+
+
+    <div class="p-4">
+        <h2>Factura del cliente con numero de tarjeta <strong>{{data.target}}</strong></h2>
+        <embed class="container-fluid" style="height: 500px;" src="\static\Facturas\{{data.target}}_factura.pdf">
+    </div>
+
+    <div class="p-4">
+        <h2>Factura del cliente con numero de tarjeta <strong>{{data.target}}</strong></h2>
+        <embed class="container-fluid" style="height: 500px;" src="\static\Facturas\{{data.target}}_factura.pdf">
+    </div>
+
+    
+{% endblock %}
+
+{% block js%} {% endblock %}

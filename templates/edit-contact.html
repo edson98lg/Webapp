@@ -1,0 +1,114 @@
+{% extends './layout.html' %}
+
+{% block title %} asesores {% endblock %}
+
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/asesores.css') }}"> {% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg  pl-5 pr-5">
+    <div class="container-fluid">
+            <span class="titulo">Editar numero </span>
+            <span class=" ">Usuario:<strong> {{data.usuario}}</strong>
+                <a href="/salir"><span class="btn btn-danger ml-3 "> Cerrar sesion</span></a>
+            </span>
+    </div>
+</nav>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+        <div class="alert alert-danger" role="alert">
+            Algún archivo no es PDF, favor de subirlo en PDF
+          </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="mt-5">
+    <form action="/update/{{contact.0}}/{{data.fechainicial}}/{{data.fechafinal}}" method="POST" enctype="multipart/form-data"> 
+        <div class="container">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <h4 class=""> Ascesor </h4>
+                    <select class="form-select" name="ascesor" id="validation" required>
+                        <option selected disabled value=""> Ascesor </option>
+                        <option value="Alberto19">Alberto19</option>
+                        <option value="Javier19">Javier19</option>
+                        <option value="Edwin19">Edwin19</option>
+                        <option value="Lesly">Lesly</option>
+                        <option value="Eusebio">Eusebio</option>
+                        <option value="Alcafin-A">Alcafin-A</option>
+                        <option value="Alcafin-AE">Alcafin-AE</option>
+                        <option value="Alcafin-F">Alcafin-F</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h4 class=""> Nombre del cliente </h4>
+                    <input class="form-control" type="text"  placeholder="Nombre del cliente" name="nombre_cliente" value="{{ contact.3}}">
+                </div>
+                <div class="col">
+                    <h4 class=""> Numero de tarjeta </h4>
+                    <input class="form-control" type="number" step="any"  placeholder="Numero de tarjeta" name="numero_tarjeta" value="{{ contact.4}}">
+                </div>
+                <div class="col">
+                    <h4 class=""> Monto del vale </h4>
+                    <input class="form-control" type="number" placeholder="Monto del vale" name="monto" value="{{ contact.5}}">
+                </div>
+                <div class="col">
+                    <h4 class="mt-5"> Retorno del cliente </h4>
+                    <input class="form-control" type="text" placeholder="Retorno del cliente" name="retorno_cliente" value="{{ contact.6}}">
+                </div>
+                <div class="col">
+                    <h4 class="mt-5"> Retorno del ascesor </h4>
+                    <input class="form-control" type="text" placeholder="Retorno del ascesor" name="retorno_ascesor" value="{{ contact.7}}"></div>
+                <div class="col">
+                    <h4 class="mt-5"> Banco </h4>
+                    <select class="form-select"  name="banco" id="validation" required>
+                        <option selected disabled value=""> Banco</option>
+                        <option value="BBVA">BBVA</option>
+                        <option value="Banamex">Banamex</option>
+                        <option value="Santander">Santander</option>
+                        <option value="HSBC">HSBC</option>
+                        <option value="Banorte">Banorte</option>
+                        <option value="Banco Azteca">Banco Azteca</option>
+                        <option value="Bancoppel">Bancoppel</option>
+                        <option value="Inbursa">Inbursa</option>
+                        <option value="otros">Otros</option>        <!-- Agregar input de otros -->
+                    </select> 
+                </div>
+                <div class="col">
+                    <h4 class="mt-5"> CLABE interbancaria </h4>
+                    <input class="form-control" type="number" required placeholder="CLABE interbancaria" name="clabe" value="{{ contact.9}}">  
+                </div>
+
+                <div class="col-md-8">
+                    <h4 class="mt-5"> INE y Tarjeta del cliente </h4>
+                    <input class="form-control" type="file" required name = "ine">
+                </div>
+
+                <div class="col-md-8">
+                    <h4 class="mt-5"> Solicitud del cliente </h4>
+                    <input class="form-control" type="file" required name = "solicitud">
+                </div>
+
+                <div class="col-md-8">
+                    <h4 class="mt-5"> Estado de cuenta </h4>
+                    <input class="form-control" type="file" required name="estado_cuenta">
+                </div>
+                
+
+            </div>
+
+            <div class="mt-5 mb-5">
+                <button class="btn btn-danger submit"> Enviar </button>
+            </div>
+
+        </div>
+
+        
+    </form>
+</div>
+
+{% endblock %}
+
+{% block js%} {% endblock %}

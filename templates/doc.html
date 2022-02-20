@@ -1,0 +1,29 @@
+{% extends './layout.html' %}
+
+{% block title %} Documentos {% endblock %}
+
+{% block css%} {% endblock %}
+
+{% block body %}
+
+    <h1 class="p-4">Documentos del cliente</h1>
+
+
+    <div class="p-4">
+        <h2>Ine y tarjeta del cliente </h2>
+        <embed class="container-fluid" style="height: 500px;" src="\static\docs\{{data.url}}_ine.pdf">
+    </div>
+
+    <div class="p-4">
+        <h2>Solicitud de cliente </h2>
+        <embed class="container-fluid" style="height: 500px;" src="\static\docs\{{data.url}}_solicitud.pdf">
+    </div>
+
+    <div class="p-4">
+        <h2>Estado de cuenta </h2>
+        <embed class="container-fluid" style="height: 500px;" src="\static\docs\{{data.url}}_estado_cuenta.pdf">
+    </div>
+    
+{% endblock %}
+
+{% block js%} {% endblock %}

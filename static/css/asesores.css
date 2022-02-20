@@ -1,0 +1,51 @@
+h4{
+    margin-left: 5px;
+    font-size: medium;
+    color: rgb(49, 49, 49);
+}
+.btn{
+    font-size: x-small;
+    font-weight: 450;
+}
+.titulo{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+}
+.navbar{
+    background-color: rgb(70, 70, 70);
+}
+span{
+    color: rgb(236, 236, 236);
+}
+.Mayuscula{
+    text-transform: capitalize;
+
+}
+.asesores{
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 75%;
+
+}
+.box-input{
+    border-color: rgb(226, 226, 226);
+    box-shadow: none;
+    border-radius: 4px;
+    width: 19em;
+    height: 2em;
+}
+.box-select{
+    border-radius: 4px;
+    width: 19em;
+    height: 2em;
+    
+}
+.main-select{
+    opacity: 0.1;
+}
+.submit{
+    width: 15%;
+    font-size: large;
+    font-weight: 450;
+}

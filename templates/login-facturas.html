@@ -1,0 +1,25 @@
+{% extends './layout.html' %}
+
+{% block title %} Acceso facturas {% endblock %}
+
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}"> {% endblock %}
+
+{% block body %}
+<div class="login-page">
+  <div class="form">
+
+    <div class="app-title">
+        <h1>Facturas</h1>
+    </div>
+
+    <form class="login-form" action="/login-facturas" method="POST">
+      <input type="text" name="nmUserNamea" required placeholder="Username"/>
+      <input type="password" name="nmPassa" required placeholder="Password"/>
+        <button>Ingresar</button> 
+    </form>
+    
+  </div>
+</div>
+{% endblock %}
+
+{% block js%} <script src="{{ url_for('static',filename='js/login.js') }}"></script> {% endblock %}
